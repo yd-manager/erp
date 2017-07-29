@@ -12,6 +12,7 @@
 		<module>erp-ms-stock</module>
 		<module>erp-ms-base</module>
 		<module>erp-ms-ik</module>
+		<module>erp-ms-office</module>
 	</modules>
 
 	<dependencies>
