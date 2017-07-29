@@ -2,13 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>tr.com.yd.ee</groupId>
-    <artifactId>erp</artifactId>
+    <artifactId>erp-webapps</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>erp-webapps</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>erp-stock-webapp</module>
-  	<module>erp-crm-webapp</module>
-  </modules>
+  <artifactId>erp-crm-webapp</artifactId>
+  <packaging>war</packaging>
 </project>
