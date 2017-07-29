@@ -14,5 +14,10 @@
 			<artifactId>erp-ms-base-domain</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>tr.com.yd</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>${jdbc.version}</version>
+		</dependency>
 	</dependencies>
 </project>

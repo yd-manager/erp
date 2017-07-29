@@ -13,6 +13,7 @@
 
 	<properties>
 		<spring.version>4.3.9.RELEASE</spring.version>
+		<jdbc.version>1.0.0</jdbc.version>
 	</properties>
 
 	<build>
