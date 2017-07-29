@@ -10,5 +10,6 @@
   <modules>
   	<module>erp-stock-webapp</module>
   	<module>erp-crm-webapp</module>
+    <module>erp-ik-webapp</module>
   </modules>
 </project>
