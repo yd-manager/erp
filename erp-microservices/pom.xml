@@ -11,6 +11,7 @@
 	<modules>
 		<module>erp-ms-stock</module>
 		<module>erp-ms-base</module>
+		<module>erp-ms-ik</module>
 	</modules>
 
 	<dependencies>
