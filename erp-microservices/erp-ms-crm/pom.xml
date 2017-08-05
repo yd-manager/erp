@@ -3,10 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>erp</artifactId>
         <groupId>tr.com.yd.ee</groupId>
+        <artifactId>erp-microservices</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>erp-ms-crm</artifactId>
     <packaging>pom</packaging>
     <modules>
         <module>erp-ms-crm-domain</module>
@@ -18,11 +20,6 @@
         <dependency>
             <groupId>tr.com.yd.ee</groupId>
             <artifactId>erp-ms-base-app</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>tr.com.yd.ee</groupId>
-            <artifactId>erp-commons-app</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
