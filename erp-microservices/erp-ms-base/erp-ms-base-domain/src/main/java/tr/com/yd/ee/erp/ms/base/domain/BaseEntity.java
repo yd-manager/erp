@@ -1,7 +1,9 @@
 package tr.com.yd.ee.erp.ms.base.domain;
 
+import javax.persistence.MappedSuperclass;
 import java.util.Date;
 
+@MappedSuperclass
 public abstract class BaseEntity {
 
 	private Long id;
