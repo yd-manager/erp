@@ -1,4 +1,4 @@
-package tr.com.yd.ee.erp.ms.stock.material;
+package tr.com.yd.ee.erp.ms.stock.domain.material;
 
 import tr.com.yd.ee.erp.ms.base.domain.BaseEntity;
 

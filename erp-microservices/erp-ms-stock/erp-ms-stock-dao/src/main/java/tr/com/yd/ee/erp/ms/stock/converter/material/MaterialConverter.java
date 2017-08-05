@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import tr.com.yd.ee.erp.dto.stock.material.MaterialDTO;
 import tr.com.yd.ee.erp.ms.base.converter.BaseConverter;
 import tr.com.yd.ee.erp.ms.base.converter.BasePartialConverter;
-import tr.com.yd.ee.erp.ms.stock.material.Material;
+import tr.com.yd.ee.erp.ms.stock.domain.material.Material;
 
 @Component
 public class MaterialConverter implements BaseConverter<MaterialDTO, Material>{
