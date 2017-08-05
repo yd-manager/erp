@@ -3,29 +3,21 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>tr.com.yd.ee</groupId>
-		<artifactId>erp</artifactId>
+		<artifactId>erp-microservices</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>erp-microservices</artifactId>
+	<artifactId>erp-ms-time-management</artifactId>
 	<packaging>pom</packaging>
 	<modules>
-		<module>erp-ms-stock</module>
-		<module>erp-ms-base</module>
-		<module>erp-ms-ik</module>
-		<module>erp-ms-office</module>
-		<module>erp-ms-time-management</module>
+		<module>erp-ms-time-management-domain</module>
+		<module>erp-ms-time-management-dao</module>
+		<module>erp-ms-time-management-service</module>
 	</modules>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
-		<!-- internal -->
-		<dependency>
 			<groupId>tr.com.yd.ee</groupId>
-			<artifactId>erp-commons-app</artifactId>
+			<artifactId>erp-ms-base-app</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

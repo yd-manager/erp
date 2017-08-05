@@ -2,16 +2,8 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>tr.com.yd.ee</groupId>
-    <artifactId>erp-ms-stock</artifactId>
+    <artifactId>erp-ms-time-management</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>erp-ms-stock-service</artifactId>
-  
-  <dependencies>
-		<dependency>
-			<groupId>tr.com.yd.ee</groupId>
-			<artifactId>erp-ms-stock-dao</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
+  <artifactId>erp-ms-time-management-dao</artifactId>
 </project>
