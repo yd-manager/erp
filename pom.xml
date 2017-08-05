@@ -16,7 +16,10 @@
 		<persistence-api.version>1.0.2</persistence-api.version>
 		<spring.version>4.3.10.RELEASE</spring.version>
 		<jdbc.version>1.0.0</jdbc.version>
+		<jsf.version>2.2.4</jsf.version>
+		<javax.servlet>3.0.1</javax.servlet>
 	</properties>
+
 
 	<build>
 		<plugins>
