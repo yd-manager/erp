@@ -1,14 +1,13 @@
 package tr.com.yd.ee.erp.ms.stock.converter.material;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
+import org.springframework.stereotype.Repository;
 import tr.com.yd.ee.erp.dto.stock.material.MaterialDTO;
 import tr.com.yd.ee.erp.ms.base.converter.BaseConverter;
 import tr.com.yd.ee.erp.ms.base.converter.BasePartialConverter;
 import tr.com.yd.ee.erp.ms.stock.domain.material.Material;
 
-@Component
+@Repository
 public class MaterialConverter implements BaseConverter<MaterialDTO, Material>{
 
 	@Autowired

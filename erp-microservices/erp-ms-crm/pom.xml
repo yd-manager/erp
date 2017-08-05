@@ -15,7 +15,6 @@
         <module>erp-ms-crm-dao</module>
         <module>erp-ms-crm-service</module>
     </modules>
-
     <dependencies>
         <dependency>
             <groupId>tr.com.yd.ee</groupId>
@@ -23,6 +22,4 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
-
 </project>

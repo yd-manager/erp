@@ -1,15 +1,24 @@
 package tr.com.yd.ee.erp.ms.base.domain;
 
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 import java.util.Date;
 
 @MappedSuperclass
 public abstract class BaseEntity {
 
+	@Id
+	@Column(name = "ID")
+	@GeneratedValue(generator = "SequenceGenerator")
 	private Long id;
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "CREATION_DATE")
 	private Date creationDate;
+	@Column(name = "CREATED_USER_ID")
 	private Long createdUserId;
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "UPDATED_DATE")
 	private Date updatedDate;
+	@Column(name = "UPDATED_USER_ID")
 	private Long updatedUserId;
 
 	public Long getId() {

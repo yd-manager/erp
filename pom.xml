@@ -18,6 +18,11 @@
 		<jdbc.version>1.0.0</jdbc.version>
 		<jsf.version>2.2.4</jsf.version>
 		<javax.servlet>3.0.1</javax.servlet>
+		<javax.el.version>2.2.1</javax.el.version>
+		<java.faces-api>2.1</java.faces-api>
+		<jstl.version>1.2</jstl.version>
+		<spring-security.version>4.2.2.RELEASE</spring-security.version>
+		<mysql-connector>5.1.9</mysql-connector>
 	</properties>
 
 
