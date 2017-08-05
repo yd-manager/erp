@@ -9,7 +9,7 @@
 		<module>erp-commons</module>
 		<module>erp-microservices</module>
 		<module>erp-webapps</module>
-	</modules>
+    </modules>
 
 	<properties>
 		<spring.version>4.3.9.RELEASE</spring.version>

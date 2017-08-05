@@ -11,5 +11,6 @@
   	<module>erp-stock-webapp</module>
   	<module>erp-crm-webapp</module>
     <module>erp-ik-webapp</module>
+    <module>erp-time-management-webapp</module>
   </modules>
 </project>
