@@ -12,6 +12,7 @@
     <module>erp-crm-webapp</module>
     <module>erp-ik-webapp</module>
     <module>erp-time-management-webapp</module>
+    <module>erp-webapp-fragment</module>
   </modules>
 
   <dependencies>
@@ -29,6 +30,11 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
       <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
     </dependency>
   </dependencies>
 </project>

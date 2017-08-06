@@ -13,9 +13,8 @@
     <dependencies>
         <dependency>
             <groupId>tr.com.yd.ee</groupId>
-            <artifactId>erp-ms-ik-service</artifactId>
+            <artifactId>erp-webapp-fragment</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
 </project>
