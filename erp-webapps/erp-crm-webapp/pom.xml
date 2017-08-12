@@ -14,6 +14,11 @@
       <artifactId>erp-webapp-fragment</artifactId>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
+    <dependency>
+      <groupId>tr.com.yd.ee</groupId>
+      <artifactId>erp-ms-crm-service</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 
 </project>

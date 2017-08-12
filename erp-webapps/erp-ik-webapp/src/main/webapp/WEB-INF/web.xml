@@ -8,4 +8,13 @@
 		<name>erpwebappfragment</name>
 	</absolute-ordering>
 
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath*:META-INF/spring-context.xml
+			classpath*:META-INF/ik-context.xml
+		</param-value>
+	</context-param>
+
 </web-app>

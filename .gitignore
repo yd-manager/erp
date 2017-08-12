@@ -71,3 +71,4 @@ erp.iml
 /erp-webapps/erp-time-management-webapp/target/
 /erp-webapps/erp-webapp-fragment/target/
 .project
+/erp-webapps/erp-stock-webapp/target/
