@@ -72,3 +72,14 @@ erp.iml
 /erp-webapps/erp-webapp-fragment/target/
 .project
 /erp-webapps/erp-stock-webapp/target/
+/.idea/inspectionProfiles/
+/erp-commons/erp-commons-app/target/
+/erp-commons/erp-dto/target/
+/erp-commons/erp-utils/target/
+/erp-microservices/erp-ms-base/erp-ms-base-app/target/
+/erp-microservices/erp-ms-base/erp-ms-base-dao/target/
+/erp-microservices/erp-ms-base/erp-ms-base-domain/target/
+/erp-microservices/erp-ms-base/erp-ms-base-service/target/
+/erp-microservices/erp-ms-stock/erp-ms-stock-dao/target/
+/erp-microservices/erp-ms-stock/erp-ms-stock-domain/target/
+/erp-microservices/erp-ms-stock/erp-ms-stock-service/target/
