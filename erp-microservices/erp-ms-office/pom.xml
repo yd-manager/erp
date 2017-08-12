@@ -12,4 +12,12 @@
   	<module>erp-ms-office-domain</module>
   	<module>erp-ms-office-service</module>
   </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>tr.com.yd.ee</groupId>
+            <artifactId>erp-ms-base-app</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

@@ -13,6 +13,7 @@
     <module>erp-ik-webapp</module>
     <module>erp-time-management-webapp</module>
     <module>erp-webapp-fragment</module>
+    <module>erp-office-webapp</module>
   </modules>
 
  
