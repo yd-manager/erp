@@ -5,8 +5,10 @@
     <artifactId>erp-webapps</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
+
   <artifactId>erp-stock-webapp</artifactId>
   <packaging>war</packaging>
+
   <dependencies>
     <dependency>
       <groupId>tr.com.yd.ee</groupId>

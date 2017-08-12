@@ -6,4 +6,12 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>erp-ms-office-service</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>tr.com.yd.ee</groupId>
+      <artifactId>erp-ms-office-dao</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 </project>
