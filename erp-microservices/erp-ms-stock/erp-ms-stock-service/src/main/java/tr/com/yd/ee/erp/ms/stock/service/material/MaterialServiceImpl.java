@@ -13,6 +13,6 @@ public class MaterialServiceImpl {
     @PostConstruct
     public void init()
     {
-        System.out.println("KKKKKKKAAAAAAAAARDEŞŞŞŞ SİKERLER....");
+        System.out.println("MaterialService is created.");
     }
 }

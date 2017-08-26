@@ -13,6 +13,7 @@
         <param-value>
             classpath*:META-INF/spring-context.xml
             classpath*:META-INF/office-context.xml
+            classpath:META-INF/webapp-common-context.xml
         </param-value>
     </context-param>
 

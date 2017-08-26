@@ -83,3 +83,4 @@ erp.iml
 /erp-microservices/erp-ms-stock/erp-ms-stock-dao/target/
 /erp-microservices/erp-ms-stock/erp-ms-stock-domain/target/
 /erp-microservices/erp-ms-stock/erp-ms-stock-service/target/
+/erp-webapps/erp-office-webapp/erp-office-webapp.iml

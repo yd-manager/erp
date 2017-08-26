@@ -18,7 +18,7 @@ public class Test extends HttpServlet {
 
         out.println("TEST DENEME");
 
-        System.out.println("SERVLET STOCK MODÜLÜNÜN İÇİNDE..");
+        System.out.println("Test servlet is created.");
 
     }
 }
