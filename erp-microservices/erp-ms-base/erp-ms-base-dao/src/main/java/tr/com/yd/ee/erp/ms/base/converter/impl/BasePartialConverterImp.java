@@ -16,6 +16,7 @@ public class BasePartialConverterImp implements BasePartialConverter<BaseDTO, Ba
 		e.setCreationDate(d.getCreationDate());
 		e.setUpdatedUserId(d.getUpdatedUserId());
 		e.setUpdatedDate(d.getUpdatedDate());
+		e.setVersion(d.getVersion());
 	}
 
 	@Override
@@ -25,6 +26,7 @@ public class BasePartialConverterImp implements BasePartialConverter<BaseDTO, Ba
 		d.setCreationDate(e.getCreationDate());
 		d.setUpdatedUserId(e.getUpdatedUserId());
 		d.setUpdatedDate(e.getUpdatedDate());
+		d.setVersion(e.getVersion());
 	}
 
 }

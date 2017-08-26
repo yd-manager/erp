@@ -9,7 +9,14 @@ public abstract class BaseDTO {
 	private Long createdUserId;
 	private Date updatedDate;
 	private Long updatedUserId;
+	private Long version;
 	
+	public Long getVersion() {
+		return version;
+	}
+	public void setVersion(Long version) {
+		this.version = version;
+	}
 	public Long getId() {
 		return id;
 	}

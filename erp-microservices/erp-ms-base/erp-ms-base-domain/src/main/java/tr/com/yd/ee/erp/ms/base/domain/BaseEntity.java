@@ -8,7 +8,7 @@ public abstract class BaseEntity {
 
 	@Id
 	@Column(name = "ID")
-	@GeneratedValue(generator = "SequenceGenerator")
+	@GeneratedValue(generator = "SequenceGenerator" ,strategy=GenerationType.SEQUENCE)
 	private Long id;
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "CREATION_DATE")
@@ -20,7 +20,15 @@ public abstract class BaseEntity {
 	private Date updatedDate;
 	@Column(name = "UPDATED_USER_ID")
 	private Long updatedUserId;
+	@Column(name = "VERSION")
+	private Long version;
 
+	public Long getVersion() {
+		return version;
+	}
+	public void setVersion(Long version) {
+		this.version = version;
+	}
 	public Long getId() {
 		return id;
 	}
