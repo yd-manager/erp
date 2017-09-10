@@ -29,5 +29,10 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql-connector}</version>
 		</dependency>
+		<dependency>
+			<groupId>tr.com.yd</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 	</dependencies>
 </project>

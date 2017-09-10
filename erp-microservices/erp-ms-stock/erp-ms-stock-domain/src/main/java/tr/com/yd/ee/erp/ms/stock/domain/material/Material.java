@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "STOCK_MATERIAL")
-@SequenceGenerator(sequenceName = "MATERIAL_SEQ",name = "SequenceGenerator",allocationSize=1 ,initialValue=1)
+@SequenceGenerator(sequenceName = "SEQ_MATERIAL",name = "SequenceGenerator",allocationSize=1 ,initialValue=1)
 public class Material extends BaseEntity{
 
 
