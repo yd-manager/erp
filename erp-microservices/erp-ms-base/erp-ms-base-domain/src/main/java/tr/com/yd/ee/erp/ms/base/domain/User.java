@@ -8,8 +8,8 @@ import javax.persistence.*;
  * Created by Ramazan Karagoz on 26.08.2017.
  */
 @Entity
-@Table(name = "USER")
-@SequenceGenerator(sequenceName = "USER_SEQ",name = "SequenceGenerator")
+@Table(name = "YD_USER")
+@SequenceGenerator(sequenceName = "SEQ_USER",name = "SequenceGenerator",allocationSize=1 ,initialValue=1)
 public class User extends BaseEntity implements IUser {
 
     @Column(name = "USERNAME")
