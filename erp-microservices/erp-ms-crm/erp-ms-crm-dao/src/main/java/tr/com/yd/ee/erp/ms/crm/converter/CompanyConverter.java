@@ -2,10 +2,7 @@ package tr.com.yd.ee.erp.ms.crm.converter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import tr.com.yd.ee.erp.dto.crm.CompanyDTO;
-import tr.com.yd.ee.erp.dto.crm.enums.CompanyTypeEnum;
-import tr.com.yd.ee.erp.dto.stock.material.MaterialDTO;
 import tr.com.yd.ee.erp.ms.base.converter.BaseConverter;
 import tr.com.yd.ee.erp.ms.base.converter.BasePartialConverter;
 import tr.com.yd.ee.erp.ms.crm.domain.Company;
@@ -14,7 +11,7 @@ import tr.com.yd.ee.erp.ms.crm.domain.Company;
 public class CompanyConverter implements BaseConverter<CompanyDTO,Company> {
 
 	@Autowired
-	private BasePartialConverter<CompanyDTO,Company> basePartialConverter;
+	private BasePartialConverter basePartialConverter;
 	
 	@Override
 	public CompanyDTO toDTO(Company e) {
