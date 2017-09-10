@@ -4,15 +4,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<h:outputStylesheet name="common-style.css" library="css" />
+</h:head>
 <h:body>
+	<div id="page">
+		<h:outputText value="hello from template"></h:outputText>
+		<ui:insert name="content">
 
-	<ui:composition template="template.xhtml">
-
-		<ui:define name="content">
-			<h2>from hello</h2>
-		</ui:define>
-
-
-	</ui:composition>
+		</ui:insert>
+	</div>
 </h:body>
 </html>
