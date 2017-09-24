@@ -6,12 +6,16 @@ import tr.com.yd.ee.erp.dto.crm.CompanyDTO;
 import tr.com.yd.ee.erp.ms.base.converter.BaseConverter;
 import tr.com.yd.ee.erp.ms.base.converter.BasePartialConverter;
 import tr.com.yd.ee.erp.ms.crm.domain.Company;
+import tr.com.yd.ee.erp.ms.crm.domain.CrmContact;
 
 @Component
 public class CompanyConverter implements BaseConverter<CompanyDTO,Company> {
 
 	@Autowired
 	private BasePartialConverter basePartialConverter;
+	
+	@Autowired
+	private CrmContactConverter crmContactConverter;
 	
 	@Override
 	public CompanyDTO toDTO(Company e) {
@@ -28,7 +32,7 @@ public class CompanyConverter implements BaseConverter<CompanyDTO,Company> {
 		dto.setCompanyTaxNo(e.getCompanyTaxNo());
 		dto.setCompanyIBAN(e.getCompanyIBAN());
 		dto.setCompanyType(e.getCompanyType());
-		dto.setCompanyCEOId(e.getCompanyCEOId());
+		dto.setCompanyCEO(crmContactConverter.toDTO(e.getCompanyCEO()));
 		return dto;
 		
 	}
@@ -47,7 +51,7 @@ public class CompanyConverter implements BaseConverter<CompanyDTO,Company> {
 		e.setCompanyTaxNo(dto.getCompanyTaxNo());
 		e.setCompanyIBAN(dto.getCompanyIBAN());
 		e.setCompanyType(dto.getCompanyType());
-		e.setCompanyCEOId(dto.getCompanyCEOId());
+		e.setCompanyCEO(crmContactConverter.toEntity(dto.getCompanyCEO()));
 		return e;
 		
 	}

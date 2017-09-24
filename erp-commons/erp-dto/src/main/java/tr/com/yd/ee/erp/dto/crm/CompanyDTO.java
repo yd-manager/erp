@@ -1,5 +1,7 @@
 package tr.com.yd.ee.erp.dto.crm;
 
+import java.util.List;
+
 import tr.com.yd.ee.erp.dto.base.BaseDTO;
 import tr.com.yd.ee.erp.dto.crm.enums.CompanyTypeEnum;
 
@@ -16,7 +18,7 @@ public class CompanyDTO extends BaseDTO  {
 	private Long companyTaxNo;
 	private String companyIBAN;
 	private CompanyTypeEnum companyType;//Enum
-	private Integer companyCEOId;// FK crm_contact
+	private CrmContactDTO companyCEO;// FK crm_contact
 	
 	public String getCompanyNo() {
 		return companyNo;
@@ -85,11 +87,12 @@ public class CompanyDTO extends BaseDTO  {
 	public void setCompanyType(CompanyTypeEnum companyType) {
 		this.companyType = companyType;
 	}
-	public Integer getCompanyCEOId() {
-		return companyCEOId;
+	public CrmContactDTO getCompanyCEO() {
+		return companyCEO;
 	}
-	public void setCompanyCEOId(Integer companyCEOId) {
-		this.companyCEOId = companyCEOId;
+	public void setCompanyCEO(CrmContactDTO companyCEO) {
+		this.companyCEO = companyCEO;
 	}
+
 	
 }

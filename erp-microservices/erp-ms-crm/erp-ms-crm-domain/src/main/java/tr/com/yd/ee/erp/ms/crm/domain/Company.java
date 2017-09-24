@@ -1,9 +1,15 @@
 package tr.com.yd.ee.erp.ms.crm.domain;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -33,8 +39,8 @@ public class Company extends BaseEntity {
 	@Column(name="COMPANY_EMAIL")
 	private String companyEmail;
 	
-	
-	private Integer companyAdresId;//FK crm_adres
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "crmCompany")
+	private List<CrmAddress> companyAdresList;//FK crm_adres
 	
 	@Column(name="COMPANY_TAX_OFFICE")
 	private String companyTaxOffice;
@@ -50,8 +56,12 @@ public class Company extends BaseEntity {
 	private CompanyTypeEnum companyType;//Enum
 	
 	
-	private Integer companyCEOId;// FK crm_contact
+	@OneToOne(fetch = FetchType.LAZY)
+	@PrimaryKeyJoinColumn
+	private CrmContact companyCEO;// FK crm_contact
 
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "crmCompany")
+	private List<CrmContact> companyContactList;
 
 	public String getCompanyNo() {
 		return companyNo;
@@ -113,13 +123,14 @@ public class Company extends BaseEntity {
 	}
 
 
-	public Integer getCompanyAdresId() {
-		return companyAdresId;
+
+	public List<CrmAddress> getCompanyAdresList() {
+		return companyAdresList;
 	}
 
 
-	public void setCompanyAdresId(Integer companyAdresId) {
-		this.companyAdresId = companyAdresId;
+	public void setCompanyAdresList(List<CrmAddress> companyAdresList) {
+		this.companyAdresList = companyAdresList;
 	}
 
 
@@ -163,14 +174,17 @@ public class Company extends BaseEntity {
 	}
 
 
-	public Integer getCompanyCEOId() {
-		return companyCEOId;
+	public CrmContact getCompanyCEO() {
+		return companyCEO;
 	}
 
 
-	public void setCompanyCEOId(Integer companyCEOId) {
-		this.companyCEOId = companyCEOId;
+	public void setCompanyCEO(CrmContact companyCEO) {
+		this.companyCEO = companyCEO;
 	}
+
+
+
 	
 	
 }
