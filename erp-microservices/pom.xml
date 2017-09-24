@@ -14,6 +14,7 @@
 		<module>erp-ms-ik</module>
 		<module>erp-ms-office</module>
 		<module>erp-ms-time-management</module>
+		<module>erp-ms-crm</module>
 	</modules>
 
 	<dependencies>
