@@ -36,6 +36,11 @@
 			<artifactId>erp-ms-base-app</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>6.0</version>
+		</dependency>
 	</dependencies>
 
 </project>
