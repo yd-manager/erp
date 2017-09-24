@@ -5,6 +5,7 @@
 		<groupId>tr.com.yd.ee</groupId>
 		<artifactId>erp</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+
 	</parent>
 	<artifactId>erp-microservices</artifactId>
 	<packaging>pom</packaging>
