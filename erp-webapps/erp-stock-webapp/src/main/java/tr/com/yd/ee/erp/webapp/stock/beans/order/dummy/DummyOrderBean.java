@@ -32,6 +32,7 @@ public class DummyOrderBean implements Serializable {
 	
 	public void onParentSelected()
 	{
+		System.out.println("here");
 		selectedParent.getChildList().add(new Child(1l, "c1", "s1", "123123", selectedParent));
 		selectedParent.getChildList().add(new Child(2l, "c2", "s2", "123123", selectedParent));
 		selectedParent.getChildList().add(new Child(3l, "c3", "s3", "123123", selectedParent));

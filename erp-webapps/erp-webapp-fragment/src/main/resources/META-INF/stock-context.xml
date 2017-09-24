@@ -13,6 +13,9 @@
     <context:component-scan base-package="tr.com.yd.ee.erp.ms.stock">
     </context:component-scan>
 
+    <context:component-scan base-package="tr.com.yd.ee.erp.webapp.stock">
+    </context:component-scan>
+
   
 
 </beans>

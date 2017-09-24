@@ -12,8 +12,10 @@ public class Parent {
 	private List<Child> childList;
 	
 	private List<Child2> child2List;
-	
-	
+
+	public Parent() {
+	}
+
 	public Parent(Long id, String parentCode, String address, List<Child> child) {
 		super();
 		this.id = id;

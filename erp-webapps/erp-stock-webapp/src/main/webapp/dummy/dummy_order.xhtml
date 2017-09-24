@@ -1,72 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
 <h:head>
 </h:head>
 <h:body>
-	<h:form id="form_id">
-		<p:fieldset legend="Dummy Yönet">
-		
-			<p:fieldset legend="Dummy Listeleme">
-				<p:toolbar>
-					<f:facet name="left">
-						<p:button icon="ui-icon-document" />
-						<p:button icon="ui-icon-copy" />
-						<p:button icon="ui-icon-trash" />
-					</f:facet>
-				</p:toolbar>
-				<p:dataTable 
-					id="dummy_id"
-					var="parent"
-					rowKey="#{parent.id}"
-					selectionMode="single" 
-					selection="#{dummyOrderBean.selectedParent}"
-					value="#{dummyOrderBean.parentList}">
-					<p:ajax event="rowSelect" 
-							update=":form_id:tabs_id"
-							listener="#{dummyOrderBean.onParentSelected}"/>
-							
-					<p:column headerText="id">
-						<h:outputText value="#{parent.id}" />
-					</p:column>
-					<p:column headerText="code">
-						<h:outputText value="#{parent.parentCode}" />
-					</p:column>
-					<p:column headerText="address">
-						<h:outputText value="#{parent.address}" />
-					</p:column>
-				</p:dataTable>
-			</p:fieldset>
-			<p:fieldset legend="Dummy Detay">
-				<p:tabView id="tabs_id">
-					<p:tab title="Childeren Tab1">
-						<p:dataTable id="child1_id" var="c1" rowKey="#{c1.id}"
-							value="#{parent.childList}">
-							<p:column headerText="id">
-								<h:outputText value="#{c1.id}" />
-							</p:column>
-							<p:column headerText="name">
-								<h:outputText value="#{c1.name}" />
-							</p:column>
-							<p:column headerText="surname">
-								<h:outputText value="#{c1.surname}" />
-							</p:column>
-							<p:column headerText="tc">
-								<h:outputText value="#{c1.tc}" />
-							</p:column>
-						</p:dataTable>
-					</p:tab>
-					<p:tab title="Childeren Tab2">
-						oc
-					</p:tab>
-				</p:tabView>
-			</p:fieldset>
-		</p:fieldset>
-	</h:form>
+    <ui:composition template="/template.xhtml">
+        <ui:define name="content">
+            <h:form id="form_id">
+                <p:fieldset legend="Dummy Yönet">
+
+                    <p:fieldset legend="Dummy Listeleme">
+                        <p:toolbar>
+                            <f:facet name="left">
+                                <p:button icon="ui-icon-document"/>
+                                <p:button icon="ui-icon-copy"/>
+                                <p:button icon="ui-icon-trash"/>
+                            </f:facet>
+                        </p:toolbar>
+                        <p:dataTable
+                                id="dummy_id"
+                                var="parent"
+                                rowKey="#{parent.id}"
+                                selectionMode="single"
+                                selection="#{dummyOrderBean.selectedParent}"
+                                value="#{dummyOrderBean.parentList}">
+
+                            <p:ajax event="rowSelect"
+                                    update="@form"
+                                    listener="#{dummyOrderBean.onParentSelected}"/>
+
+                            <p:column headerText="id">
+                                <h:outputText value="#{parent.id}"/>
+                            </p:column>
+                            <p:column headerText="code">
+                                <h:outputText value="#{parent.parentCode}"/>
+                            </p:column>
+                            <p:column headerText="address">
+                                <h:outputText value="#{parent.address}"/>
+                            </p:column>
+                        </p:dataTable>
+                    </p:fieldset>
+
+                    <p:fieldset legend="Dummy Detay">
+                        <p:tabView id="tabs_id">
+                            <p:tab title="Childeren Tab1">
+                                <p:dataTable id="child1_id" var="c1" rowKey="#{c1.id}"
+                                             value="#{dummyOrderBean.selectedParent.childList}">
+                                    <p:column headerText="id">
+                                        <h:outputText value="#{c1.id}"/>
+                                    </p:column>
+                                    <p:column headerText="name">
+                                        <h:outputText value="#{c1.name}"/>
+                                    </p:column>
+                                    <p:column headerText="surname">
+                                        <h:outputText value="#{c1.surname}"/>
+                                    </p:column>
+                                    <p:column headerText="tc">
+                                        <h:outputText value="#{c1.tc}"/>
+                                    </p:column>
+                                </p:dataTable>
+                            </p:tab>
+                            <p:tab title="Childeren Tab2">
+                                oc
+                            </p:tab>
+                        </p:tabView>
+                    </p:fieldset>
+                </p:fieldset>
+            </h:form>
+        </ui:define>
+    </ui:composition>
 </h:body>
 </html>
