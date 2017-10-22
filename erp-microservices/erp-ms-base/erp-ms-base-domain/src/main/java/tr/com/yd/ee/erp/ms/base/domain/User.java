@@ -3,6 +3,7 @@ package tr.com.yd.ee.erp.ms.base.domain;
 import tr.com.yd.ee.erp.dto.base.enums.UserStatusEnum;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by Ramazan Karagoz on 26.08.2017.
@@ -30,16 +31,22 @@ public class User extends BaseEntity implements IUser {
     @Enumerated(EnumType.ORDINAL)
     private UserStatusEnum status;
 
+    @ManyToMany(targetEntity = Role.class)
+    @JoinTable(name = "USER_ROLE",joinColumns = {@JoinColumn(name = "USER_ID",nullable = false)}
+    ,inverseJoinColumns = {@JoinColumn(name = "ROLE_ID",nullable = false)})
+    private List<IRole> roleList;
+
     public User() {
     }
 
-    public User(String username, String password, String language, String name, String surname, UserStatusEnum status) {
+    public User(String username, String password, String language, String name, String surname, UserStatusEnum status,List<IRole> roleList) {
         this.username = username;
         this.password = password;
         this.language = language;
         this.name = name;
         this.surname = surname;
         this.status = status;
+        this.roleList=roleList;
     }
 
     public String getUsername() {
@@ -88,5 +95,13 @@ public class User extends BaseEntity implements IUser {
 
     public void setStatus(UserStatusEnum status) {
         this.status = status;
+    }
+
+    public List<IRole> getRoleList() {
+        return roleList;
+    }
+
+    public void setRoleList(List<IRole> roleList) {
+        this.roleList = roleList;
     }
 }
