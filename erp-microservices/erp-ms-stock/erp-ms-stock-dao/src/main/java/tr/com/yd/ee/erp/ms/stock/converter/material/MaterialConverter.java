@@ -22,6 +22,7 @@ public class MaterialConverter implements BaseConverter<MaterialDTO, Material>{
 		return dto;
 	}
 
+	//dto'yu entitye çeviriyor
 	@Override
 	public Material toEntity(MaterialDTO d) {
 		Material entity = new Material();
