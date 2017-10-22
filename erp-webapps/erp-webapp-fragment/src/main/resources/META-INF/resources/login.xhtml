@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+        >
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+    <title>ERP</title>
+    <script type="application/javascript" src="/META-INF/resources/config/notify.js" />
+    <script type="application/javascript">
+        onSubmit()
+        {
+            document.getElementById("f").submit();
+        }
+    </script>
+</h:head>
+
+<h:body>
+
+    <p:panel id="custom" header="Login" style="margin-bottom:15%;margin-top: 15%;margin-left: 30%;margin-right: 30%">
+        <h:form id="f" onsubmit="this.action='/j_spring_security_check';">
+            <p:growl id="growl" life="1000" />
+            <h:panelGrid columns="2" cellpadding="5">
+                <h:outputText value="UserName:" />
+                <input type="text" name="username"/><br/><br/>
+                <h:outputText value="Password:" />
+                <input type="password"  name="password"/> <br/><br/>
+                <p:commandButton value="Login" update="growl" styleClass="ui-priority-primary" async="true" onclick="onSubmit();" />
+            </h:panelGrid>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        </h:form>
+    </p:panel>
+
+    <c:if test="${param.status=='error'}">
+        <script type="application/javascript">
+            $.notify("Bad credentials!");
+        </script>
+    </c:if>
+
+    <c:if test="${param.status=='logout'}">
+        <script type="application/javascript">
+            $.notify("Logged out successfully!","success");
+        </script>
+    </c:if>
+
+</h:body>
+</html>

@@ -14,6 +14,7 @@
 		 	classpath*:META-INF/spring-context.xml
             classpath*:META-INF/stock-context.xml
 			classpath:META-INF/webapp-common-context.xml
+			classpath:META-INF/security-context.xml
         </param-value>
 	</context-param>
 
