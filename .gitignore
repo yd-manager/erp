@@ -20,4 +20,4 @@
 # Maven
 log/
 target/
-/.tgitconfig
+.tgitconfig
