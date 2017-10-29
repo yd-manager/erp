@@ -14,7 +14,7 @@
                 <p:tab title="Menu Listesi">
                     <p:toolbar>
                         <f:facet name="left">
-                            <p:button icon="ui-icon-plus"/>
+                            <p:button icon="ui-icon-plus" onclick="PF('ekle').show();"/>
                             <p:button icon="ui-icon-pencil"/>
                             <p:button icon="ui-icon-trash"/>
                         </f:facet>
@@ -32,6 +32,10 @@
                     </p:dataTable>
                 </p:tab>
             </p:tabView>
+
+            <p:dialog header="Menu Ekle" widgetVar="ekle" minHeight="50">
+                <h:outputText value="Menu inputlar burada olacak!!" />
+            </p:dialog>
         </p:fieldset>
 
     </ui:composition>
