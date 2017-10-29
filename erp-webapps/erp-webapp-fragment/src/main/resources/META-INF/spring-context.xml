@@ -10,7 +10,7 @@
 
     <context:annotation-config></context:annotation-config>
 
-    <context:component-scan base-package="tr.com.yd.ee.erp.ms.base">
+    <context:component-scan base-package="tr.com.yd.ee.erp.ms">
     </context:component-scan>
 
     <beans>

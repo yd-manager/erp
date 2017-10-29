@@ -14,9 +14,9 @@
                 <p:tab title="Menu Listesi">
                     <p:toolbar>
                         <f:facet name="left">
-                            <p:button icon="ui-icon-plus" onclick="PF('ekle').show();"/>
-                            <p:button icon="ui-icon-pencil"/>
-                            <p:button icon="ui-icon-trash"/>
+                            <p:commandButton icon="ui-icon-plus" onclick="PF('ekle').show();"/>
+                            <p:commandButton icon="ui-icon-pencil" onclick="PF('düzenle').show();"/>
+                            <p:commandButton icon="ui-icon-trash" onclick="PF('sil').show();"/>
                         </f:facet>
                     </p:toolbar>
                     <p:dataTable var="m" value="#{menuView.menuList}">
@@ -33,8 +33,35 @@
                 </p:tab>
             </p:tabView>
 
-            <p:dialog header="Menu Ekle" widgetVar="ekle" minHeight="50">
-                <h:outputText value="Menu inputlar burada olacak!!" />
+            <p:dialog header="Menu Ekle" widgetVar="ekle" minHeight="50" minWidth="50" resizable="false">
+                <h:panelGrid columns="2" cellpadding="3">
+                <p:outputLabel value="Name:"/>
+                <p:inputText/>
+                <p:outputLabel value="Url:"/>
+                <p:inputText/>
+                <p:outputLabel value="Alt Menu:"/>
+                <p:inputText/>
+                </h:panelGrid>
+                <p:commandButton value="Kaydet" icon="ui-icon-check"/>
+            </p:dialog>
+            <p:dialog header="Menu Düzenle" widgetVar="düzenle" minHeight="50" minWidth="50" resizable="false">
+                <h:panelGrid columns="2" cellpadding="3">
+                    <p:outputLabel value="Name:"/>
+                    <p:inputText/>
+                    <p:outputLabel value="Url:"/>
+                    <p:inputText/>
+                    <p:outputLabel value="Alt Menu:"/>
+                    <p:inputText/>
+                </h:panelGrid>
+                <p:commandButton value="Kaydet" icon="ui-icon-check"/>
+            </p:dialog>
+            <p:dialog header="Menu Sil" widgetVar="sil" minHeight="50" minWidth="50" resizable="false">
+                <h:panelGrid columns="2" cellpadding="2">
+                    <p:outputLabel value="Silmek İstediğinize Eminmisiniz ?"/>
+                    <p:outputLabel value=""/>
+                    <p:commandButton value="Evet" icon="ui-icon-check"/>
+                    <p:commandButton value="Hayır" icon="ui-icon-close"/>
+                </h:panelGrid>
             </p:dialog>
         </p:fieldset>
 
