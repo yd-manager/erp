@@ -11,11 +11,11 @@
 </h:head>
 <h:body>
     <p:layout fullPage="true">
-        <p:layoutUnit position="west" style="border: 0">
+        <p:layoutUnit position="west" style="border: 1">
             <p:graphicImage value="/images/erp.png" width="150" height="150" style="margin-left: 30px"/>
             <h:form>
-                    <p:menu toggleable="true" model="#{menuView.model}">
-                    </p:menu>
+                <p:menu  toggleable="true" model="#{menuView.model}" style="border: 0">
+                </p:menu>
             </h:form>
         </p:layoutUnit>
 
@@ -24,8 +24,8 @@
         </ui:insert>
 
         <p:layoutUnit position="center">
-            <h:form id="content">
-            <ui:include src="#{menuView.url}"/>
+            <h:form id="form">
+                <ui:include src="#{menuView.url}"/>
             </h:form>
         </p:layoutUnit>
 

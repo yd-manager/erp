@@ -1,6 +1,5 @@
 package tr.com.yd.ee.erp.webapp.common.menu;
 
-import com.sun.faces.component.visit.FullVisitContext;
 import org.primefaces.event.MenuActionEvent;
 import org.primefaces.model.menu.DefaultMenuItem;
 import org.primefaces.model.menu.DefaultMenuModel;
@@ -11,12 +10,6 @@ import org.springframework.stereotype.Component;
 import tr.com.yd.ee.erp.ms.base.domain.Menu;
 
 import javax.annotation.PostConstruct;
-import javax.faces.component.UIComponent;
-import javax.faces.component.UIViewRoot;
-import javax.faces.component.visit.VisitCallback;
-import javax.faces.component.visit.VisitContext;
-import javax.faces.component.visit.VisitResult;
-import javax.faces.context.FacesContext;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,11 +29,13 @@ public class MenuView implements Serializable{
     @PostConstruct
     public void init() {
         model = new DefaultMenuModel();
-
+       // url = "/hello.xhtml";
         //dummy menu
         Menu menu = new Menu("DUMMY", "/dummy/dummy_order.xhtml", "Dummy");
         Menu menu2 = new Menu("HELLO", "/hello.xhtml", "Hello");
+        Menu menu3 = new Menu("YÖNETİM", "/management.xhtml", "Menu");
         menuList = new ArrayList<>();
+        menuList.add(menu3);
         menuList.add(menu);
         menuList.add(menu2);
 
@@ -50,8 +45,8 @@ public class MenuView implements Serializable{
             item = new DefaultMenuItem(menuProperties.getSubMenu());
             item.setCommand("#{menuView.sa}");
             url=menuProperties.getPath();
-            //item.setUrl(url);
-            item.setUpdate(":content");
+ //           item.setUrl(url);
+            item.setUpdate(":form");
             firstSubmenu.addElement(item);
             model.addElement(firstSubmenu);
         }
@@ -84,5 +79,13 @@ public class MenuView implements Serializable{
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public List<Menu> getMenuList() {
+        return menuList;
+    }
+
+    public void setMenuList(List<Menu> menuList) {
+        this.menuList = menuList;
     }
 }

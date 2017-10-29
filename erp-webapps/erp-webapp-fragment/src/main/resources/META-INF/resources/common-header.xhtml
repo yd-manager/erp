@@ -7,20 +7,20 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
 <h:body>
-<ui:composition>
+    <ui:composition>
 
-    <p:layoutUnit position="north" style="border:0">
-        <h:form>
-            <p:menubar >
-                <p:menuitem value="YD MÜHENDİSLİK ERP YAZILIMI"/>
-                <f:facet name="options">
-                    <p:button value="Logout" href="/j_spring_security_logout"/>
-                </f:facet>
-            </p:menubar>
-        </h:form>
+        <p:layoutUnit position="north" size="50" style="border:0 ; overflow:hidden;">
+            <h:form>
+                <p:menubar style="border: 0">
+                    <p:menuitem value="YD MÜHENDİSLİK ERP YAZILIMI"/>
+                    <f:facet name="options">
+                        <p:button value="Logout" href="/j_spring_security_logout"/>
+                    </f:facet>
+                </p:menubar>
+            </h:form>
 
-    </p:layoutUnit>
+        </p:layoutUnit>
 
-</ui:composition>
+    </ui:composition>
 </h:body>
 </html>

@@ -9,11 +9,8 @@
 <h:head>
 </h:head>
 <h:body>
-    <ui:composition template="/template.xhtml">
-        <ui:define name="content">
-            <h:form id="form_id">
+    <ui:composition>
                 <p:fieldset legend="Dummy Yönet">
-
                     <p:fieldset legend="Dummy Listeleme">
                         <p:toolbar>
                             <f:facet name="left">
@@ -31,7 +28,7 @@
                                 value="#{dummyOrderBean.parentList}">
 
                             <p:ajax event="rowSelect"
-                                    update="@form"
+                                    update=":form"
                                     listener="#{dummyOrderBean.onParentSelected}"/>
 
                             <p:column headerText="id">
@@ -71,8 +68,6 @@
                         </p:tabView>
                     </p:fieldset>
                 </p:fieldset>
-            </h:form>
-        </ui:define>
     </ui:composition>
 </h:body>
 </html>

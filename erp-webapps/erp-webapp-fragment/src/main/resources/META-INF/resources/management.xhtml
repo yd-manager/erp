@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui" xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+<h:body>
+    <ui:composition>
+
+        <p:fieldset legend="Menu">
+            <p:tabView id="menu_tabs_id">
+                <p:tab title="Menu Listesi">
+                    <p:toolbar>
+                        <f:facet name="left">
+                            <p:button icon="ui-icon-plus"/>
+                            <p:button icon="ui-icon-pencil"/>
+                            <p:button icon="ui-icon-trash"/>
+                        </f:facet>
+                    </p:toolbar>
+                    <p:dataTable var="m" value="#{menuView.menuList}">
+                        <p:column headerText="Name">
+                            <h:outputText value="#{m.name}"/>
+                        </p:column>
+                        <p:column headerText="Url">
+                            <h:outputText value="#{m.path}"/>
+                        </p:column>
+                        <p:column headerText="Alt Menu">
+                            <h:outputText value="#{m.subMenu}"/>
+                        </p:column>
+                    </p:dataTable>
+                </p:tab>
+            </p:tabView>
+        </p:fieldset>
+
+    </ui:composition>
+</h:body>
+</html>
