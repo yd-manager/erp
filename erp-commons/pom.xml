@@ -13,5 +13,6 @@
   	<module>erp-utils</module>
   	<module>erp-dto</module>
   	<module>erp-commons-app</module>
+  	<module>erp-domain</module>
   </modules>
 </project>
