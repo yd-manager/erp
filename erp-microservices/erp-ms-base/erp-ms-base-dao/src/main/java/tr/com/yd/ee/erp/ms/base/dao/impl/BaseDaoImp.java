@@ -2,6 +2,7 @@ package tr.com.yd.ee.erp.ms.base.dao.impl;
 
 import java.util.List;
 
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import tr.com.yd.ee.erp.dto.base.BaseDTO;

@@ -3,6 +3,7 @@ package tr.com.yd.ee.erp.ms.base.domain;
 import tr.com.yd.ee.erp.dto.base.enums.UserStatusEnum;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -31,10 +32,10 @@ public class User extends BaseEntity implements IUser {
     @Enumerated(EnumType.ORDINAL)
     private UserStatusEnum status;
 
-    @ManyToMany(targetEntity = Role.class)
+    @ManyToMany(targetEntity = Role.class,fetch = FetchType.EAGER)
     @JoinTable(name = "USER_ROLE",joinColumns = {@JoinColumn(name = "USER_ID",nullable = false)}
     ,inverseJoinColumns = {@JoinColumn(name = "ROLE_ID",nullable = false)})
-    private List<IRole> roleList;
+    private List<IRole> roleList=new ArrayList<>(0);
 
     public User() {
     }
