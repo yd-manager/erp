@@ -1,6 +1,6 @@
 package tr.com.yd.ee.erp.ms.base.domain;
 
-import tr.com.yd.ee.erp.dto.base.enums.UserStatusEnum;
+import tr.com.yd.ee.erp.util.base.enums.UserStatusEnum;
 
 import javax.persistence.*;
 import java.util.ArrayList;

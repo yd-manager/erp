@@ -7,7 +7,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import tr.com.yd.ee.erp.dto.crm.enums.CompanyTypeEnum;
+import tr.com.yd.ee.erp.util.crm.enums.CompanyTypeEnum;
 import tr.com.yd.ee.erp.ms.base.domain.BaseEntity;
 
 @Entity

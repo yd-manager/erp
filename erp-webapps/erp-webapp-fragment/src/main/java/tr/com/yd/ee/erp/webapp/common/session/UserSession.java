@@ -2,7 +2,7 @@ package tr.com.yd.ee.erp.webapp.common.session;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import tr.com.yd.ee.erp.dto.base.enums.UserStatusEnum;
+import tr.com.yd.ee.erp.util.base.enums.UserStatusEnum;
 
 import javax.annotation.PostConstruct;
 

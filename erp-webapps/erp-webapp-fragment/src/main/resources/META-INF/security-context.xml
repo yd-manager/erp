@@ -9,7 +9,7 @@
 
     <context:annotation-config></context:annotation-config>
 
-    <context:component-scan base-package="tr.com.yd.ee.erp.webapp.common">
+    <context:component-scan base-package="tr.com.yd.ee.erp.ms.base.app.security">
     </context:component-scan>
 
     <security:http auto-config="true" use-expressions="true">
@@ -20,15 +20,14 @@
         <security:intercept-url pattern="/login.xhtml" access="permitAll"/>
         <security:intercept-url pattern="/leftmenu.xhtml" access="permitAll"/>
         <security:intercept-url pattern="/access-denied.xhtml" access="permitAll"/>
-        <security:intercept-url pattern="/home.xhtml" access="permitAll"/>
         <security:intercept-url pattern="/topbar.xhtml" access="permitAll"/>
-        <security:intercept-url pattern="/template.xhtml" access="hasAuthority('ROLE_USER')"/>
+        <security:intercept-url pattern="/home.xhtml" access="hasAuthority('ROLE_USER')"/>
         <security:intercept-url pattern="/dummy/dummy-order.xhtml" access="hasAuthority('ROLE_USER')"/>
         <security:intercept-url pattern="/hello.xhtml" access="hasAuthority('ROLE_USER')"/>
         <!--<security:http-basic/>-->
         <security:form-login login-page="/login.xhtml"
                              authentication-failure-url="/access-denied.xhtml"
-                             default-target-url="/template.xhtml"
+                             default-target-url="/home.xhtml"
                              always-use-default-target="true"
                              password-parameter="password"
                              username-parameter="username"

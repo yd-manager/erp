@@ -6,4 +6,13 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>erp-ms-base-service</artifactId>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>tr.com.yd.ee</groupId>
+      <artifactId>erp-ms-base-dao</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 </project>

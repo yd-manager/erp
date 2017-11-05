@@ -1,6 +1,6 @@
 package tr.com.yd.ee.erp.ms.base.domain;
 
-import tr.com.yd.ee.erp.dto.base.enums.PermissionTypeEnum;
+import tr.com.yd.ee.erp.util.base.enums.PermissionTypeEnum;
 
 import java.util.List;
 
