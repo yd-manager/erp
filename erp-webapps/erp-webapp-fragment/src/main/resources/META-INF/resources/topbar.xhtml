@@ -1,0 +1,64 @@
+<ui:composition
+
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui">
+
+
+    <div id="layout-header" class="Unselectable fontRegular">
+        <a id="layout-logo">
+            <span class="Fs23 FontTitilliumSemiBoldItalic Fleft"><span class="softblue">YAZILIM DÜKKANI</span><span
+                    class="hardblue">    ERP</span></span>
+        </a>
+
+        <ul id="sm-topmenu" class="layout-header-widgets white Fs14">
+            <li class="Fleft BordRadHalf TexAlCenter"><i class="icon-user-male"></i>
+                <ul class="layout-header-widgets-submenu BordRad5 shadows white Animated05">
+                    <li class="Animated05"><a href="#" class="white Unselectable"><i
+                            class="icon-users-2"></i>Create New User</a></li>
+                    <li class="Animated05"><a href="#" class="white Unselectable"><i
+                            class="icon-sliders"></i>User Preferences</a></li>
+                </ul>
+            </li>
+            <li class="Fleft BordRadHalf TexAlCenter"><i class="icon-mail"></i><span
+                    class="alertBubble BordRad10 Fs9">166</span>
+                <ul class="layout-header-widgets-submenu BordRad5 shadows white Animated05">
+                    <li class="Animated05"><a href="#" class="white Unselectable TexAlRight"><i
+                            class="icon-chat-empty red"></i>Jesse Pinkman<br/><span class="Fs10">Mr. White.</span></a>
+                    </li>
+                    <li class="Animated05"><a href="#" class="white Unselectable TexAlRight"><i
+                            class="icon-chat-empty"></i>Heisenberg<br/><span
+                            class="Fs10">I am the one who knocks.</span></a></li>
+                </ul>
+            </li>
+            <li class="Fleft BordRadHalf TexAlCenter"><i class="icon-bell"></i><span
+                    class="alertBubble BordRad10 Fs9">24</span>
+                <ul class="layout-header-widgets-submenu BordRad5 shadows white Animated05">
+                    <li class="Animated05"><a href="#" class="white Unselectable TexAlRight"><i
+                            class="icon-flag red"></i>New Products</a></li>
+                    <li class="Animated05"><a href="#" class="white Unselectable TexAlRight"><i
+                            class="icon-flag"></i>Task Alerts</a></li>
+                </ul>
+            </li>
+            <li class="Fleft BordRadHalf TexAlCenter"><i class="icon-power"></i>
+                <ul class="layout-header-widgets-submenu BordRad5 shadows white Animated05">
+                    <li class="Animated05">
+                        <a href="#" class="white Unselectable TexAlRight"><h:form>
+                            <p:button value="Logout" href="/j_spring_security_logout"/>
+                        </h:form> </a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+
+        <!-- NEVER REMOVE FOLLOWING 'UL' TAG ! BECAUSE THIS CONTAINS RESPONSIVE MODE HEADER MENU OPEN-CLOSE BUTTON -->
+        <ul id="sm-mobiletopmenu" class="layout-header-widgets white Fs14">
+            <li class="Fleft BordRadHalf TexAlCenter Animated05 DisplayOnResponsive"><i class="icon-th-1"></i></li>
+        </ul>
+        <!-- ****** -->
+    </div>
+
+</ui:composition>

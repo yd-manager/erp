@@ -1,14 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html
-        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui" xmlns:c="http://java.sun.com/jsp/jstl/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
-<h:body>
-    <ui:composition>
+<ui:composition
 
+        xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:p="http://primefaces.org/ui" xmlns:c="http://java.sun.com/jsp/jstl/core"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+
+    <div class="ContainerIndent">
         <p:fieldset legend="Menu">
             <p:tabView id="menu_tabs_id">
                 <p:tab title="Menu Listesi">
@@ -35,12 +32,12 @@
 
             <p:dialog header="Menu Ekle" widgetVar="ekle" minHeight="50" minWidth="50" resizable="false">
                 <h:panelGrid columns="2" cellpadding="3">
-                <p:outputLabel value="Name:"/>
-                <p:inputText/>
-                <p:outputLabel value="Url:"/>
-                <p:inputText/>
-                <p:outputLabel value="Alt Menu:"/>
-                <p:inputText/>
+                    <p:outputLabel value="Name:"/>
+                    <p:inputText/>
+                    <p:outputLabel value="Url:"/>
+                    <p:inputText/>
+                    <p:outputLabel value="Alt Menu:"/>
+                    <p:inputText/>
                 </h:panelGrid>
                 <p:commandButton value="Kaydet" icon="ui-icon-check"/>
             </p:dialog>
@@ -64,7 +61,5 @@
                 </h:panelGrid>
             </p:dialog>
         </p:fieldset>
-
-    </ui:composition>
-</h:body>
-</html>
+    </div>
+</ui:composition>

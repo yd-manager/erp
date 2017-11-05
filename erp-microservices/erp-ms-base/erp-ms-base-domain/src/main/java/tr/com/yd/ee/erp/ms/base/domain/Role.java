@@ -1,5 +1,8 @@
 package tr.com.yd.ee.erp.ms.base.domain;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,12 +18,12 @@ public class Role extends BaseEntity implements IRole{
     @Column(name = "ROLE_NAME")
     private String roleName;
 
-    @ManyToMany(targetEntity = Permission.class,fetch = FetchType.EAGER)
+    @ManyToMany(targetEntity = Permission.class)
     @JoinTable(name = "ROLE_PERMISSION",joinColumns = {@JoinColumn(name = "ROLE_ID",nullable = false)}
     ,inverseJoinColumns = {@JoinColumn(name = "PERMISSION_ID",nullable = false)})
     private List<IPermission> permissionList=new ArrayList<>(0);
 
-    @ManyToMany(targetEntity = User.class,mappedBy = "roleList",fetch = FetchType.EAGER)
+    @ManyToMany(targetEntity = User.class,mappedBy = "roleList")
     private List<IUser> userList=new ArrayList<>(0);
 
     public Role()
